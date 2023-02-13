@@ -1,13 +1,15 @@
 import React from "react";
 import Sidebar from "./components/Sidebar";
+import Viewer from "./components/Viewer";
+import { BrowserRouter } from "react-router-dom";
 
 function Main() {
   return (
     <div className="flex h-full w-full">
-      <Sidebar />
-      <div className="flex justify-center	items-center grow">
-        <div className="text-5xl">Chart</div>
-      </div>
+      <BrowserRouter>
+        <Sidebar />
+        <Viewer />
+      </BrowserRouter>
     </div>
   );
 }
