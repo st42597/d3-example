@@ -7,7 +7,7 @@ import LineChartPage from "./pages/LineChartPage";
 
 function Viewer() {
   return (
-    <div className="flex justify-center	items-center grow overflow-scroll">
+    <div className="flex justify-center	items-center grow overflow-auto">
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/playground" element={<PlaygroundPage />}></Route>

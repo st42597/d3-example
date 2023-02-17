@@ -10,7 +10,7 @@ const sidebarOption = [
 
 function Sidebar() {
   return (
-    <nav className="h-full w-80 bg-emerald-300 p-6 overflow-scroll">
+    <nav className="h-full w-80 bg-emerald-300 p-6 overflow-y-auto">
       <h1 className="text-2xl flex justify-center items-center font-bold mb-6 cursor-pointer">
         D3.js-example
       </h1>
