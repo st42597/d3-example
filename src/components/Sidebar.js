@@ -18,9 +18,9 @@ function Sidebar() {
         <NavLink
           to={item.path}
           className={({ isActive }) => {
-            return isActive
-              ? "text-xl flex justify-center items-center my-2 p-2 cursor-pointer hover:bg-slate-400/[.4] text-white"
-              : "text-xl flex justify-center items-center my-2 p-2 cursor-pointer hover:bg-slate-400/[.4]";
+            const defaultStyle =
+              "text-xl flex justify-center items-center my-2 p-2 cursor-pointer hover:bg-slate-400/[.4]";
+            return isActive ? defaultStyle + " font-bold" : defaultStyle;
           }}
           key={item.name}
         >
