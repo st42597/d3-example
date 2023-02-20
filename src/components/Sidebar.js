@@ -6,6 +6,7 @@ const sidebarOption = [
   { name: "Playground", path: "/playground" },
   { name: "BarChart", path: "/barchart" },
   { name: "LineChart", path: "/linechart" },
+  { name: "Arc", path: "/arc" },
 ];
 
 function Sidebar() {
