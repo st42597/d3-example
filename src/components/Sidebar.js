@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const sidebarOption = [
   { name: "Home", path: "/" },
-  { name: "Playground", path: "playground" },
-  { name: "BarChart", path: "barchart" },
-  { name: "LineChart", path: "linechart" },
+  { name: "Playground", path: "/playground" },
+  { name: "BarChart", path: "/barchart" },
+  { name: "LineChart", path: "/linechart" },
 ];
 
 function Sidebar() {
