@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 function Main() {
   return (
     <div className="flex h-full w-full">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Sidebar />
         <Viewer />
       </BrowserRouter>
