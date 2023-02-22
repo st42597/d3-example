@@ -87,7 +87,6 @@ function BarChart() {
   }
 
   useEffect(() => {
-    console.log("aㅠ");
     drawChart();
   }, []);
 
