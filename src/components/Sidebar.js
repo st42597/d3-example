@@ -7,6 +7,7 @@ const sidebarOption = [
   { name: "BarChart", path: "/barchart" },
   { name: "LineChart", path: "/linechart" },
   { name: "Arc", path: "/arc" },
+  { name: "PieChart", path: "/piechart" },
 ];
 
 function Sidebar() {

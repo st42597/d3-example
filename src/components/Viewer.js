@@ -5,6 +5,7 @@ import PlaygroundPage from "./pages/PlaygroundPage";
 import BarChartPage from "./pages/BarChartPage";
 import LineChartPage from "./pages/LineChartPage";
 import ArcPage from "./pages/ArcPage";
+import PieChartPage from "./pages/PieChartPage";
 
 function Viewer() {
   return (
@@ -15,6 +16,7 @@ function Viewer() {
         <Route path="/barchart" element={<BarChartPage />}></Route>
         <Route path="/linechart" element={<LineChartPage />}></Route>
         <Route path="/arc" element={<ArcPage />}></Route>
+        <Route path="/piechart" element={<PieChartPage />}></Route>
       </Routes>
     </div>
   );
