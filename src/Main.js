@@ -15,6 +15,11 @@ const sidebarOption = [
   { name: "LineChart", path: "/linechart", element: <pages.LineChartPage /> },
   { name: "Arc", path: "/arc", element: <pages.ArcPage /> },
   { name: "PieChart", path: "/piechart", element: <pages.PieChartPage /> },
+  {
+    name: "ScatterPlot",
+    path: "/scatterplot",
+    element: <pages.ScatterPlotPage />,
+  },
 ];
 
 function Main() {
