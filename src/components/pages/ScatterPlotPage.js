@@ -37,7 +37,7 @@ function ScatterPlotPage() {
 
     const yScale = d3
       .scaleLinear()
-      .domain([0, 100])
+      .domain([100, 0])
       .range([margin.top, height - margin.bottom]);
 
     const xGrid = (g) =>
@@ -64,6 +64,8 @@ function ScatterPlotPage() {
         .attr("stroke", "gray")
         .attr("stroke-opacity", 0.2);
 
+    const gridG = svg.append("g");
+
     const xAxisG = svg
       .append("g")
       .attr("transform", `translate(0, ${height - margin.bottom})`);
@@ -74,8 +76,8 @@ function ScatterPlotPage() {
     const xAxis = d3.axisBottom(xScale);
     const yAxis = d3.axisLeft(yScale);
 
-    svg.call(xGrid);
-    svg.call(yGrid);
+    gridG.call(xGrid);
+    gridG.call(yGrid);
     xAxisG.call(xAxis);
     yAxisG.call(yAxis);
 
@@ -94,6 +96,9 @@ function ScatterPlotPage() {
           margin.top +
           ((height - margin.top - margin.bottom) * (100 - d.y)) / 100
       )
+      .attr("r", 0)
+      .transition()
+      .duration(1200)
       .attr("r", (d) => (700 / 100) * d.r)
       .attr("fill", "hotpink")
       .attr("opacity", 0.4);
