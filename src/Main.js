@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Viewer from "./components/Viewer";
 import { BrowserRouter } from "react-router-dom";
 import * as pages from "./components/pages/index";
+import ZoomPage from "./components/pages/ZoomPage";
 
 const sidebarOption = [
   { name: "Home", path: "/", element: <pages.HomePage /> },
@@ -19,6 +20,11 @@ const sidebarOption = [
     name: "ScatterPlot",
     path: "/scatterplot",
     element: <pages.ScatterPlotPage />,
+  },
+  {
+    name: "Zoom",
+    path: "/zoom",
+    element: <ZoomPage />,
   },
 ];
 

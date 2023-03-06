@@ -5,6 +5,7 @@ import LineChartPage from "./LineChartPage";
 import PieChartPage from "./PieChartPage";
 import PlaygroundPage from "./PlaygroundPage";
 import ScatterPlotPage from "./ScatterPlotPage";
+import ZoomePage from "./ZoomPage";
 
 export {
   ArcPage,
@@ -14,4 +15,5 @@ export {
   PieChartPage,
   PlaygroundPage,
   ScatterPlotPage,
+  ZoomePage,
 };
