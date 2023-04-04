@@ -4,10 +4,10 @@ import * as d3 from "d3";
 function BrushPage() {
   const canvas = useRef();
   const [selectedList, setSelectedList] = useState([]);
+  const [dataSize, setDataSize] = useState(5000);
 
   useEffect(() => {
     function drawChart() {
-      const dataSize = 10000;
       const random = (s, e) => d3.randomUniform(s, e);
       const data = Array.from({ length: dataSize }, (_, i) => {
         return {
@@ -17,7 +17,6 @@ function BrushPage() {
           value: random(0, 10)(),
         };
       });
-      console.log(data);
       const margin = { top: 50, right: 50, bottom: 50, left: 50 };
       const [width, height] = [800, 800];
 
@@ -26,7 +25,7 @@ function BrushPage() {
         .attr("width", width)
         .attr("height", height);
 
-      const gGrid = svg.append("g");
+      const gGrid = svg.selectAll("g").remove();
 
       const xScale = d3
         .scaleLinear()
@@ -106,16 +105,28 @@ function BrushPage() {
         const x1 = brushCoords[1][0];
         const y0 = brushCoords[0][1];
         const y1 = brushCoords[1][1];
-        console.log(x0, x1, y0, y1);
         return x0 <= cx && cx <= x1 && y0 <= cy && cy <= y1;
       }
     }
     drawChart();
-  }, []);
+  }, [dataSize]);
 
   return (
     <div className="flex items-center">
-      <svg ref={canvas} />
+      <div className="flex flex-col">
+        <svg ref={canvas} />
+        <input
+          type="range"
+          min={100}
+          max={10000}
+          step={100}
+          value={dataSize}
+          onChange={(d) => {
+            setDataSize(d.target.value);
+          }}
+        ></input>
+        {dataSize}
+      </div>
       <div className="flex flex-col">
         <div className="h-[400px] overflow-auto">
           <div> graph</div>
